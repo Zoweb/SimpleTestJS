@@ -2,7 +2,7 @@
 
 Building is very easy.
 
-Place the files you wish to build in the /src/main folder - these will be compiled and minified to the dist folder. Remember that when you add these, you need to add them to /build/build.js's `files.src` array.
+Place the files you wish to build in the /src/main folder - these will be compiled and minified to the dist folder. Remember that when you add these, you need to add them to /build/build.js's `files.src` array. If the files use ES6, they can't be minified by UglifyJS. These need to be added to the /src/not-minifiable folder. If you can find a way to minify these, please add a pull request for it!
 
 Each time you create a new release, make sure to increment /build/build.js's `const version` number:
 The **first number** increments at every major release (one that changes the way the framework is used, e.g deprecating functions).
