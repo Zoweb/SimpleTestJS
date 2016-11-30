@@ -1,0 +1,21 @@
+{
+  "name": "simple-test-js",
+  "description": "A simple, lightweight JavaScript testing library",
+  "version": "1.0.0",
+  "maintainers": [
+    {
+      "name": "zoweb",
+      "email": "me@zoweb.me",
+      "web": "http://zoweb.me"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zoweb/SimpleTestJS.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mustache": "^2.3.0",
+    "uglify-js": "^2.7.4"
+  }
+}
