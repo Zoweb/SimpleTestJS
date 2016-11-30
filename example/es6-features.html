@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example: ES6 Features Test</title>
+
+    <script src="../dist/simple-test-js-v1.0.0.min.js"></script>
+    <script src="../src/not-minifiable/features.js"></script>
+</head>
+<!--
+Copyright (c) 2016, zoweb
+
+See the license in the LICENSE file (downloaded with this repository, in the root folder)
+By using this code, you agree to the license in the file specified (the MIT license)
+-->
+<body>
+<h1>Example: ES6 Features Test</h1>
+<pre>
+    Classes:
+    <span id="class"></span>
+
+    Template Literal:
+    <span id="template"></span>
+
+    Variable Initializer:
+    <span id="var"></span>
+</pre>
+
+<h2>Usage</h2>
+<pre>
+test.feature(String someFeatureName, Boolean forceObjectAsReturnValue)
+where:
+    someFeatureName is:
+     - class (tests for ES6 class compatibility, e.g class { ... })
+     - template literal (tests for ES6 template literal compatibility, e.g `some ${variable}`)
+     - variable initializer (tests for ES6 variable initializers, e.g let and const)
+    forceObjectAsReturnValue is a boolean, where, if false the returned value can be either `false` or an object
+                                                  if true the returned value will always be an object
+</pre>
+<script>
+    $ = elem => document.getElementById(elem);
+    $("class").textContent = JSON.stringify(test.feature("class", true));
+    $("template").textContent = JSON.stringify(test.feature("template literal", true));
+    $("var").textContent = JSON.stringify(test.feature("variable initializer", true));
+</script>
+</body>
+</html>
